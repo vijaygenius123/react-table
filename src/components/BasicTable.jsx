@@ -16,7 +16,7 @@ const BasicTable = () => {
         data: data
     })
 
-    const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow}  = tableInstance;
+    const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = tableInstance;
     return (
         <div>
             <table {...getTableProps()}>
@@ -38,7 +38,7 @@ const BasicTable = () => {
                     return (
                         <tr {...row.getRowProps()}>
                             {row.cells.map(cell => {
-                        return  <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                                return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
                             })}
 
                         </tr>
